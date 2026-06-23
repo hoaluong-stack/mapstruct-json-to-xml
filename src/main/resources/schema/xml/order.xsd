@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Order">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="OrderNumber" type="xs:string"/>
+                <xs:element name="CustomerCode" type="xs:string"/>
+                <xs:element name="OrderDate" type="xs:string"/>
+                <xs:element name="SourceSystem" type="xs:string"/>
+                <xs:element name="SalesChannel" type="xs:string"/>
+                <xs:element name="Currency" type="xs:string"/>
+                <xs:element name="PaymentMethod" type="xs:string"/>
+                <xs:element name="CouponCode" type="xs:string"/>
+                <xs:element name="DiscountAmount" type="xs:string"/>
+                <xs:element name="ShippingFee" type="xs:string"/>
+                <xs:element name="TaxAmount" type="xs:string"/>
+                <xs:element name="Priority" type="xs:string"/>
+                <xs:element name="OrderStatus" type="xs:string"/>
+                <xs:element name="Buyer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FullName" type="xs:string"/>
+                            <xs:element name="Contact" type="xs:string"/>
+                            <xs:element name="ShippingAddress" type="xs:string"/>
+                            <xs:element name="MemberTier" type="xs:string"/>
+                            <xs:element name="BirthDate" type="xs:string"/>
+                            <xs:element name="Gender" type="xs:string"/>
+                            <xs:element name="CompanyName" type="xs:string"/>
+                            <xs:element name="TaxNumber" type="xs:string"/>
+                            <xs:element name="CountryCode" type="xs:string"/>
+                            <xs:element name="City" type="xs:string"/>
+                            <xs:element name="PostalCode" type="xs:string"/>
+                            <xs:element name="MarketingOptIn" type="xs:boolean"/>
+                            <xs:element name="LoyaltyPoints" type="xs:int"/>
+                            <xs:element name="VipSince" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Product" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Code" type="xs:string"/>
+                            <xs:element name="Label" type="xs:string"/>
+                            <xs:element name="Qty" type="xs:int"/>
+                            <xs:element name="UnitPrice" type="xs:string"/>
+                            <xs:element name="LineTotal" type="xs:string"/>
+                            <xs:element name="Type" type="xs:string"/>
+                            <xs:element name="Maker" type="xs:string"/>
+                            <xs:element name="Weight" type="xs:string"/>
+                            <xs:element name="Wrapped" type="xs:boolean"/>
+                            <xs:element name="Warehouse" type="xs:string"/>
+                            <xs:element name="DeliveryNote" type="xs:string"/>
+                            <xs:element name="Color" type="xs:string"/>
+                            <xs:element name="Size" type="xs:string"/>
+                            <xs:element name="Material" type="xs:string"/>
+                            <xs:element name="OriginCountry" type="xs:string"/>
+                            <xs:element name="Barcode" type="xs:string"/>
+                            <xs:element name="SerialNumber" type="xs:string"/>
+                            <xs:element name="WarrantyMonths" type="xs:int"/>
+                            <xs:element name="Fragile" type="xs:boolean"/>
+                            <xs:element name="ExpiryDate" type="xs:string"/>
+                            <xs:element name="SupplierCode" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GrandTotal" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

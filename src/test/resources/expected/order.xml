@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Order>
+    <OrderNumber>ORD-2026-0001</OrderNumber>
+    <CustomerCode>98765</CustomerCode>
+    <OrderDate>23/06/2026</OrderDate>
+    <SourceSystem>WEB-STORE</SourceSystem>
+    <SalesChannel>ONLINE</SalesChannel>
+    <Currency>USD</Currency>
+    <PaymentMethod>CREDIT_CARD</PaymentMethod>
+    <CouponCode>SUMMER26</CouponCode>
+    <DiscountAmount>5.00</DiscountAmount>
+    <ShippingFee>4.50</ShippingFee>
+    <TaxAmount>6.50</TaxAmount>
+    <Priority>HIGH</Priority>
+    <OrderStatus>CONFIRMED</OrderStatus>
+    <Buyer>
+        <FullName>Duy Nguyen</FullName>
+        <Contact>duy@example.com | +84 900 000 000</Contact>
+        <ShippingAddress>Ho Chi Minh City, Vietnam</ShippingAddress>
+        <MemberTier>GOLD</MemberTier>
+        <BirthDate>12/04/1994</BirthDate>
+        <Gender>MALE</Gender>
+        <CompanyName>Example Trading</CompanyName>
+        <TaxNumber>TAX-123456</TaxNumber>
+        <CountryCode>VN</CountryCode>
+        <City>Ho Chi Minh City</City>
+        <PostalCode>700000</PostalCode>
+        <MarketingOptIn>true</MarketingOptIn>
+        <LoyaltyPoints>2400</LoyaltyPoints>
+        <VipSince>15/01/2024</VipSince>
+    </Buyer>
+    <Product>
+        <Code>SKU-001</Code>
+        <Label>SKU-001 - USB-C Hub</Label>
+        <Qty>2</Qty>
+        <UnitPrice>25.50</UnitPrice>
+        <LineTotal>51.00</LineTotal>
+        <Type>ELECTRONICS</Type>
+        <Maker>Brand-A</Maker>
+        <Weight>0.25 kg</Weight>
+        <Wrapped>true</Wrapped>
+        <Warehouse>WH-01</Warehouse>
+        <DeliveryNote>Deliver before lunch and call...</DeliveryNote>
+        <Color>SPACE GRAY</Color>
+        <Size>M</Size>
+        <Material>Aluminum</Material>
+        <OriginCountry>CN</OriginCountry>
+        <Barcode>893000000001</Barcode>
+        <SerialNumber>SN-USB-001</SerialNumber>
+        <WarrantyMonths>24</WarrantyMonths>
+        <Fragile>false</Fragile>
+        <ExpiryDate>31/12/2028</ExpiryDate>
+        <SupplierCode>SUP-A</SupplierCode>
+    </Product>
+    <Product>
+        <Code>SKU-002</Code>
+        <Label>SKU-002 - Garden Light</Label>
+        <Qty>3</Qty>
+        <UnitPrice>12.00</UnitPrice>
+        <LineTotal>36.00</LineTotal>
+        <Type>GARDEN</Type>
+        <Maker>Brand-B</Maker>
+        <Weight>1.20 kg</Weight>
+        <Wrapped>false</Wrapped>
+        <Warehouse>WH-02</Warehouse>
+        <DeliveryNote>Leave at reception</DeliveryNote>
+        <Color>WARM WHITE</Color>
+        <Size>L</Size>
+        <Material>Steel</Material>
+        <OriginCountry>VN</OriginCountry>
+        <Barcode>893000000002</Barcode>
+        <SerialNumber>SN-LIGHT-002</SerialNumber>
+        <WarrantyMonths>12</WarrantyMonths>
+        <Fragile>true</Fragile>
+        <ExpiryDate>30/06/2027</ExpiryDate>
+        <SupplierCode>SUP-B</SupplierCode>
+    </Product>
+    <GrandTotal>87.00</GrandTotal>
+</Order>
