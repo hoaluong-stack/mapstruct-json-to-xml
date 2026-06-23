@@ -21,8 +21,8 @@ public class Order {
     private String taxAmount;
     private String priority;
     private String orderStatus;
-    private Buyer buyer;
-    private List<Product> product;
+    public Buyer buyer;
+    public List<Product> product;
     private String grandTotal;
 
     public String getOrderNumber() {
