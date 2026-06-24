@@ -5,18 +5,50 @@ import java.util.List;
 
 @XmlRootElement(name = "Order")
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {
+        "orderNumber",
+        "customerCode",
+        "orderDate",
+        "sourceSystem",
+        "salesChannel",
+        "currency",
+        "paymentMethod",
+        "couponCode",
+        "discountAmount",
+        "shippingFee",
+        "taxAmount",
+        "priority",
+        "orderStatus",
+        "buyer",
+        "product",
+        "grandTotal"
+})
 public class Order {
+    @XmlElement(name = "OrderNumber")
     private String orderNumber;
+    @XmlElement(name = "CustomerCode")
+    private String customerCode;
+    @XmlElement(name = "OrderDate")
     private String orderDate;
+    @XmlElement(name = "SourceSystem")
     private String sourceSystem;
+    @XmlElement(name = "SalesChannel")
     private String salesChannel;
+    @XmlElement(name = "Currency")
     private String currency;
+    @XmlElement(name = "PaymentMethod")
     private String paymentMethod;
+    @XmlElement(name = "CouponCode")
     private String couponCode;
+    @XmlElement(name = "DiscountAmount")
     private String discountAmount;
+    @XmlElement(name = "ShippingFee")
     private String shippingFee;
+    @XmlElement(name = "TaxAmount")
     private String taxAmount;
+    @XmlElement(name = "Priority")
     private String priority;
+    @XmlElement(name = "OrderStatus")
     private String orderStatus;
 
     @XmlElement(name = "Buyer")
@@ -24,6 +56,7 @@ public class Order {
 
     @XmlElement(name = "Product")
     public List<Product> product;
+    @XmlElement(name = "GrandTotal")
     private String grandTotal;
 
     public String getOrderNumber() {
@@ -32,6 +65,14 @@ public class Order {
 
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
     public String getOrderDate() {
@@ -148,6 +189,7 @@ public class Order {
 
     public Order(String orderNumber, String customerCode, String orderDate, String sourceSystem, String salesChannel, String currency, String paymentMethod, String couponCode, String discountAmount, String shippingFee, String taxAmount, String priority, String orderStatus, Buyer buyer, List<Product> product, String grandTotal) {
         this.orderNumber = orderNumber;
+        this.customerCode = customerCode;
         this.orderDate = orderDate;
         this.sourceSystem = sourceSystem;
         this.salesChannel = salesChannel;

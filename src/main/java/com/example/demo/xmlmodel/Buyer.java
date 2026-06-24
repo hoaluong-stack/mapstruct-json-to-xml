@@ -1,20 +1,58 @@
 package com.example.demo.xmlmodel;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {
+        "fullName",
+        "contact",
+        "shippingAddress",
+        "memberTier",
+        "birthDate",
+        "gender",
+        "companyName",
+        "taxNumber",
+        "countryCode",
+        "city",
+        "postalCode",
+        "marketingOptIn",
+        "loyaltyPoints",
+        "vipSince"
+})
 public class Buyer {
+    @XmlTransient
     private String customerCode;
+    @XmlElement(name = "FullName")
     private String fullName;
+    @XmlElement(name = "Contact")
     private String contact;
+    @XmlElement(name = "ShippingAddress")
     private String shippingAddress;
+    @XmlElement(name = "MemberTier")
     private String memberTier;
+    @XmlElement(name = "BirthDate")
     private String birthDate;
+    @XmlElement(name = "Gender")
     private String gender;
+    @XmlElement(name = "CompanyName")
     private String companyName;
+    @XmlElement(name = "TaxNumber")
     private String taxNumber;
+    @XmlElement(name = "CountryCode")
     private String countryCode;
+    @XmlElement(name = "City")
     private String city;
+    @XmlElement(name = "PostalCode")
     private String postalCode;
+    @XmlElement(name = "MarketingOptIn")
     private boolean marketingOptIn;
+    @XmlElement(name = "LoyaltyPoints")
     private int loyaltyPoints;
+    @XmlElement(name = "VipSince")
     private String vipSince;
 
     public String getFullName() {

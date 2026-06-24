@@ -1,21 +1,66 @@
 package com.example.demo.xmlmodel;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {
+        "code",
+        "label",
+        "qty",
+        "unitPrice",
+        "lineTotal",
+        "type",
+        "maker",
+        "weight",
+        "wrapped",
+        "warehouse",
+        "deliveryNote",
+        "color",
+        "size",
+        "material",
+        "originCountry",
+        "barcode",
+        "serialNumber",
+        "warrantyMonths",
+        "fragile",
+        "expiryDate",
+        "supplierCode"
+})
 public class Product {
+    @XmlElement(name = "Code")
     private String code;
+    @XmlElement(name = "Label")
     private String label;
+    @XmlElement(name = "Qty")
     private int qty;
+    @XmlElement(name = "UnitPrice")
     private String unitPrice;
+    @XmlElement(name = "LineTotal")
     private String lineTotal;
+    @XmlElement(name = "Type")
     private String type;
+    @XmlElement(name = "Maker")
     private String maker;
+    @XmlElement(name = "Weight")
     private String weight;
+    @XmlElement(name = "Wrapped")
     private boolean wrapped;
+    @XmlElement(name = "Warehouse")
     private String warehouse;
+    @XmlElement(name = "DeliveryNote")
     private String deliveryNote;
+    @XmlElement(name = "Color")
     private String color;
+    @XmlElement(name = "Size")
     private String size;
+    @XmlElement(name = "Material")
     private String material;
+    @XmlElement(name = "OriginCountry")
     private String originCountry;
+    @XmlElement(name = "Barcode")
     private String barcode;
 
     public String getCode() {
@@ -186,11 +231,16 @@ public class Product {
         this.supplierCode = supplierCode;
     }
 
+    @XmlElement(name = "SerialNumber")
     private String serialNumber;
 
+    @XmlElement(name = "WarrantyMonths")
     private int warrantyMonths;
+    @XmlElement(name = "Fragile")
     private boolean fragile;
+    @XmlElement(name = "ExpiryDate")
     private String expiryDate;
+    @XmlElement(name = "SupplierCode")
     private String supplierCode;
 
     public Product(String code, String label, int qty, String unitPrice, String lineTotal, String type, String maker, String weight, boolean wrapped, String warehouse, String deliveryNote, String color, String size, String material, String originCountry, String barcode, String serialNumber, int warrantyMonths, boolean fragile, String expiryDate, String supplierCode) {
