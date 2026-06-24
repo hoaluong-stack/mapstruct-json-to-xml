@@ -11,7 +11,8 @@ import java.io.StringWriter;
 import java.nio.file.Path;
 
 public class OrderXmlConverter {
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper =
+            new ObjectMapper().findAndRegisterModules();
 
     public String convertFile(Path jsonFile) throws Exception {
         JsonOrder jsonOrder = objectMapper.readValue(jsonFile.toFile(), JsonOrder.class);

@@ -2,6 +2,7 @@ package com.example.demo.mapper;
 
 import com.example.demo.jsonmodel.Item;
 import com.example.demo.xmlmodel.Product;
+import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
@@ -9,6 +10,7 @@ import org.mapstruct.factory.Mappers;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+@Mapper
 public interface ProductMapper {
     ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
 
@@ -29,5 +31,10 @@ public interface ProductMapper {
     @Named("objectToString")
     default String objectToString(Object value) {
         return value == null ? null : String.valueOf(value);
+    }
+
+    @Named("localDateToString")
+    default String localDateToString(LocalDate date) {
+        return date == null ? null : date.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 }

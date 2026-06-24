@@ -1,6 +1,7 @@
 package com.example.demo.xmlmodel;
 
 public class Buyer {
+    private String customerCode;
     private String fullName;
     private String contact;
     private String shippingAddress;
@@ -128,7 +129,8 @@ public class Buyer {
         this.vipSince = vipSince;
     }
 
-    public Buyer(String fullName, String contact, String shippingAddress, String memberTier, String birthDate, String gender, String companyName, String taxNumber, String countryCode, String city, String postalCode, boolean marketingOptIn, int loyaltyPoints, String vipSince) {
+    public Buyer(String customerCode, String fullName, String contact, String shippingAddress, String memberTier, String birthDate, String gender, String companyName, String taxNumber, String countryCode, String city, String postalCode, boolean marketingOptIn, int loyaltyPoints, String vipSince) {
+        this.customerCode = customerCode;
         this.fullName = fullName;
         this.contact = contact;
         this.shippingAddress = shippingAddress;
@@ -143,5 +145,16 @@ public class Buyer {
         this.marketingOptIn = marketingOptIn;
         this.loyaltyPoints = loyaltyPoints;
         this.vipSince = vipSince;
+    }
+
+    public Buyer() {
+    }
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 }

@@ -176,4 +176,6 @@ public class Customer {
         this.loyaltyPoints = loyaltyPoints;
         this.vipSince = vipSince;
     }
+
+    public Customer() {}
 }

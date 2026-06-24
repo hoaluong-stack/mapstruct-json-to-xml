@@ -158,4 +158,6 @@ public class JsonOrder {
         this.items = items;
         this.totalAmount = totalAmount;
     }
+
+    public JsonOrder() {}
 }

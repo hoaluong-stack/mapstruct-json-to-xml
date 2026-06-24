@@ -216,4 +216,8 @@ public class Product {
         this.expiryDate = expiryDate;
         this.supplierCode = supplierCode;
     }
+
+    public Product() {
+    }
+
 }

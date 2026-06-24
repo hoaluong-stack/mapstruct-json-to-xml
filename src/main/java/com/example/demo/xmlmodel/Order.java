@@ -1,15 +1,12 @@
 package com.example.demo.xmlmodel;
+import jakarta.xml.bind.annotation.*;
 
-import com.example.demo.jsonmodel.Customer;
-import com.example.demo.jsonmodel.Item;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.List;
 
+@XmlRootElement(name = "Order")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Order {
     private String orderNumber;
-    private String customerCode;
     private String orderDate;
     private String sourceSystem;
     private String salesChannel;
@@ -21,7 +18,11 @@ public class Order {
     private String taxAmount;
     private String priority;
     private String orderStatus;
+
+    @XmlElement(name = "Buyer")
     public Buyer buyer;
+
+    @XmlElement(name = "Product")
     public List<Product> product;
     private String grandTotal;
 
@@ -31,14 +32,6 @@ public class Order {
 
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
-    }
-
-    public String getCustomerCode() {
-        return customerCode;
-    }
-
-    public void setCustomerCode(String customerCode) {
-        this.customerCode = customerCode;
     }
 
     public String getOrderDate() {
@@ -155,7 +148,6 @@ public class Order {
 
     public Order(String orderNumber, String customerCode, String orderDate, String sourceSystem, String salesChannel, String currency, String paymentMethod, String couponCode, String discountAmount, String shippingFee, String taxAmount, String priority, String orderStatus, Buyer buyer, List<Product> product, String grandTotal) {
         this.orderNumber = orderNumber;
-        this.customerCode = customerCode;
         this.orderDate = orderDate;
         this.sourceSystem = sourceSystem;
         this.salesChannel = salesChannel;
@@ -171,4 +163,7 @@ public class Order {
         this.product = product;
         this.grandTotal = grandTotal;
     }
+    public Order() {
+    }
+
 }
